@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState, useRef } from 'react';
 import { Route, Routes } from "react-router-dom";
+import LazyLoad from 'react-lazy-load';
 
 // User data & preferences
 import {
@@ -13,7 +14,6 @@ import Hobbies from "./home/Hobbies.js";
 import Portfolio from "./home/Portfolio.js";
 import Experience from "./home/Experience.js";
 
-// import {Box, Grid} from "@mui/material";
 
 const Home = React.forwardRef((props, ref) => {
    return (
@@ -27,29 +27,33 @@ const Home = React.forwardRef((props, ref) => {
             socials={mainInfo.socials}
             ref={ref}
          />
-         {about.show && (
-            <About
-               heading={about.heading}
-               bio={about.bio}
-               link={about.profilePictureLink}
-               imgSize={about.imageSize}
-               resume={about.resume}
-            />
-         )}
-         {/* {hobbies.show && (
+         <LazyLoad width={"100%"} threshold={0.95}>
+            {about.show && (
+               <About
+                  heading={about.heading}
+                  bio={about.bio}
+                  link={about.profilePictureLink}
+                  imgSize={about.imageSize}
+                  resume={about.resume}
+               />
+            )}
+         </LazyLoad>
+         {hobbies.show && (
             <Hobbies
                heading={hobbies.heading}
                content={hobbies.content}
             />
-         )} */}
-         {/* {skills.show && (
-            <Skills
-               heading={skills.heading}
-               proficientWith={skills.proficientWith}
-               exposedTo={skills.exposedTo}
-            />
-         )} */}
-         {/* {portfolio.show && (
+         )}
+         <LazyLoad width={"100%"} threshold={0.95}>
+            {skills.show && (
+               <Skills
+                  heading={skills.heading}
+                  skillList={skills.skillList}
+               />
+            )}
+         </LazyLoad>
+         <LazyLoad width={"100%"} threshold={0.95}>
+         {portfolio.show && (
             <Portfolio
                heading={portfolio.heading}
                username={portfolio.gitHubUsername}
@@ -57,14 +61,14 @@ const Home = React.forwardRef((props, ref) => {
                specific={portfolio.specificRepos}
                content={portfolio.content}
             />
-         )} */}
+         )}
+         </LazyLoad>
          {experience.show && (
             <Experience
                heading={experience.heading}
                content={experience.content}
             />
-         )
-         }
+         )}
       </>
    );
 });
@@ -73,11 +77,11 @@ const BaseLayout = () => {
    const titleRef = React.useRef();
 
    return (
-         <Routes >
-            <Route path="/" exact element={<Home ref={titleRef} />} />
-         </Routes>
-         /* {false && <Route path="/blog" exact component={Blog} />}
-         {false && <Route path="/blog/:id" component={BlogPost} />} */
+      <Routes >
+         <Route path="/" exact element={<Home ref={titleRef} />} />
+      </Routes>
+      /* {false && <Route path="/blog" exact component={Blog} />}
+      {false && <Route path="/blog/:id" component={BlogPost} />} */
    );
 };
 

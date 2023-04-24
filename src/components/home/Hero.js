@@ -24,9 +24,9 @@ function Hero(props) {
         <motion.span initial={{ opacity: window.innerWidth < 996 ? '100%' : '0%' }} animate={{ opacity: '100%' }} transition={{ delay: '0.3', duration: '2' }}>
           I'm &nbsp;
         </motion.span>
-        <motion.span className='name' initial={{ opacity: window.innerWidth < 996 ? '100%' : '0%' }} animate={{ opacity: '100%' }} transition={{ delay: '0.5', duration: '2' }} exit={{ opacity: '0%', y: '200%' }}>
+        <motion.span initial={{ opacity: window.innerWidth < 996 ? '100%' : '0%' }} animate={{ opacity: '100%' }} transition={{ delay: '0.5', duration: '2' }} exit={{ opacity: '0%', y: '200%' }}>
           &#60;
-          <TypeAnimation cursor={true} sequence={titlesList} repeat={Infinity} className='block'></TypeAnimation>
+          <TypeAnimation cursor={true} sequence={titlesList} repeat={Infinity} className='block' />
           &nbsp;/&#62;
         </motion.span>
       </h2>

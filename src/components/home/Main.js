@@ -1,38 +1,35 @@
 import React from "react";
 import Container from "react-bootstrap/Container";
 import { Jumbotron } from "./migration.js";
-import { createClient } from 'pexels';
+import { BackgroundImage } from 'react-image-and-background-image-fade';
 
 import Hero from "./Hero.js";
 
-// const client = createClient(process.env.REACT_PEXELS_API_KEY);
-
 const Main = React.forwardRef(
     ({ gradient, fullName, titles, tagline, email, socials }, ref) => {
-        // const photo = client.photos.random
-
         return (
-            <div className='bgCustom bgstyle'>
+            <BackgroundImage
+                src='https://source.unsplash.com/collection/37074307/1280x720'
+                // src='https://loremflickr.com/1280/720/dark,texture/all'
+                // src='https://picsum.photos/1280/720/?blur=2&gravity=north'
+                isResponsive
+                lazyLoad
+                useChild
+            >
                 <Jumbotron
                     fluid
                     id="home"
                     style={{
                         // background: `${gradient}`,
+                        // backgroundImage: "url(https://loremflickr.com/1280/720/texture,dark/all)",
                         // backgroundImage: "url(https://picsum.photos/1280/720/?blur=2&gravity=north)",
-                        // backgroundImage: "url(https://loremflickr.com/1280/720/dark,beautiful/all)",
+                        // backgroundImage: "url(https://source.unsplash.com/collection/37074307/1280x720)",
                         // backgroundSize: "cover",
                     }}
-                    className="title bg-transparent bgstyle text-light min-vh-100 d-flex align-content-center align-items-center flex-wrap m-0"
+                    className="bgLayer title bg-transparent bgstyle text-light min-vh-100 d-flex align-content-center align-items-center flex-wrap m-0"
                 >
                     <div id="stars"></div>
                     <Container className="text-center">
-                        {/* <h1 ref={ref} className="display-1">
-                        Hello there!<br />
-                        I'm {fullName}
-                    </h1>
-                    <div className="lead fw-bold">
-                        {tagline}
-                    </div> */}
                         <Hero
                             fullName={fullName}
                             titles={titles}
@@ -42,7 +39,7 @@ const Main = React.forwardRef(
                         />
                     </Container>
                 </Jumbotron>
-            </div>
+            </BackgroundImage>
         );
     }
 );

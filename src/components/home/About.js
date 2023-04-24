@@ -48,7 +48,9 @@ const AboutMe = ({ heading, bio, link, imgSize, resume }) => {
           )}
         </div>
         <div className={`col-lg-${showPic ? "7" : "12"}`}>
-          <h2 className="display-4 mb-5 text-center">{heading}</h2>
+          <h2 className="display-4 mb-5 text-center text-dark">
+            {heading}
+          </h2>
           <p className="lead text-center">{bio}</p>
           {resume && (
             <p className="lead text-center">

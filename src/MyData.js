@@ -24,19 +24,20 @@ the site.
 
 const navBar = {
     show: true,
-  };
+};
 
 // MAIN INFORMATION SECTION
 const mainInfo = {
     firstName: "Luiz",
     middleName: "",
-    lastName: "Reis",
+    lastName: "Claro",
     email: "lfclaro@gmail.com",
     logo: logo, // If you prefer to just have your initials instead of a logo image, change this to "".
-    initials: "LR", // The example uses first and last, but feel free to use three or more if you like.
+    initials: "LC", // The example uses first and last, but feel free to use three or more if you like.
     titles: [
         "a Mobile Developer",
-        "a Web Developer"
+        "a Frontend Developer",
+        "a Backend Developer",
     ], // Add as many titles as you want for the animation in the splash page
     tagline: "Coding apps that will make you wonder why you haven't hired me yet.",
     gradient: `-webkit-linear-gradient(325deg, ${colors})`, // don't change this either
@@ -65,7 +66,7 @@ const about = {
     show: true, // Toggle whether you want to display this section or not
     heading: "About Me",
     bio: "I'm an app developer with a passion for combining cutting-edge technology with user-friendly design. With a background in audiovisual aesthetics, I bring a unique perspective to my work that allows me to create apps that look and feel great. I'm always thinking critically about how to make my apps more intuitive and engaging, and I'm constantly seeking out new opportunities to improve my skills and stay up-to-date with industry trends. I'm looking for full-time opportunities that allow me to bring my creativity and expertise to a collaborative team environment. Let's connect and create something amazing together!",
-    resume: "https://drive.google.com/file/d/12uCp8it9mAZtEdR3PDPu4lWBjOUi2rEl/view?usp=share_link", // get this link from any provider you host your resume at
+    resume: "https://drive.google.com/file/d/138XN2O8dLMopmYDY2GY7k2lwGEpbFyHd/view?usp=sharing", // get this link from any provider you host your resume at
     imageSize: 375,
     profilePictureLink: profilePic,
     /* If you want the About Section to show a profile picture you can fill the profilePictureLink either with:
@@ -80,20 +81,7 @@ For Resume either provide link to your resume or import from "assets" directory
     i.e resume: require("../assets/resume.pdf"), */
 }
 
-// SKILLS SECTION
-const skills = {
-    show: true,
-    heading: "Skills",
-    // Add skills below as desired. 
-    // To generate the proper names and icons, search at https://simpleicons.org/
-    proficientWith: [
-        'javascript', 'react', 'git', 'github', 'bootstrap', 'html5', 'css3', 'figma'
-    ],
-    exposedTo: [
-        'nodejs', 'python', 'adobeillustrator'
-    ]
-}
-
+// HOBBIES SECTION
 const hobbies = {
     show: false,
     heading: "My Hobbies",
@@ -115,6 +103,67 @@ const hobbies = {
             emoji: '👨🏻‍🍳'
         }
     ]
+}
+
+// SKILLS SECTION
+const skills = {
+    show: true,
+    heading: "Skills",
+    skillList: {
+        // Add skills in the lists below as desired.
+        // Rename or add lists following the data structure.
+        // To generate the proper names for the icons, search at https://simpleicons.org/
+        // If you cant find the skill you're looking for at SimpleIcons, 
+        // there's an alternative for brand icons found at https://fontawesome.com/search?o=r&m=free&f=brands
+        "Web Development": [
+            'html5',
+            'css3',
+            'javascript',
+            'bootstrap',
+            'php',
+            'laravel',
+            'react',
+            'nodedotjs',
+            'express',
+            'sass',
+            'jekyll',
+            'git',
+        ],
+        "Mobile Development": [
+            'swift',
+            'android',
+            'flutter',
+            'dart',
+            'kotlin',
+        ],
+        "Software Development": [
+            'python',
+            'java',
+            'dotnet',
+        ],
+        "Database & API": [
+            'mysql',
+            'mongodb',
+            'firebase',
+            'fastapi',
+            'axios',
+            'redis',
+        ],
+        "UX / UI": [
+            'figma',
+            'adobexd',
+            'adobephotoshop',
+            'adobeillustrator',
+            'adobeindesign',
+        ],
+        "Other Tools": [
+            'git',
+            'github',
+            'bitbucket',
+            'docker',
+            'jira',
+        ],
+    },
 }
 
 // This is where your portfolio projects will be detailed
@@ -183,7 +232,7 @@ const footerMessage = {
     show: false,
     heading: "Let's connect!",
     message:
-    "Thank you for reading all this way! I'm currently looking for full-time Mobile Developer or Web Developer opportunities! If you know of any roles available, if you have any questions, or if you just want to say hi, please feel free to email me at",
+        "Thank you for reading all this way! I'm currently looking for full-time Mobile Developer or Web Developer opportunities! If you know of any roles available, if you have any questions, or if you just want to say hi, please feel free to email me at",
 }
 
 export { navBar, mainInfo, about, skills, hobbies, portfolio, experience, footerMessage };
