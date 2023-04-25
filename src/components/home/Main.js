@@ -20,10 +20,7 @@ const Main = React.forwardRef(
                     fluid
                     id="home"
                     style={{
-                        // background: `${gradient}`,
-                        // backgroundImage: "url(https://loremflickr.com/1280/720/texture,dark/all)",
-                        // backgroundImage: "url(https://picsum.photos/1280/720/?blur=2&gravity=north)",
-                        // backgroundImage: "url(https://source.unsplash.com/collection/37074307/1280x720)",
+                        background: `${gradient}`,
                         // backgroundSize: "cover",
                     }}
                     className="bgLayer title bg-transparent bgstyle text-light min-vh-100 d-flex align-content-center align-items-center flex-wrap m-0"

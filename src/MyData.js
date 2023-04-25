@@ -9,13 +9,12 @@ import mock4 from "./assets/img/mocks/mock4.png"
 import mock5 from "./assets/img/mocks/mock5.png"
 
 // Styling
-import variables from './scss/App.module.scss';
-
+import variables from './scss/custom.scss';
 
 export let colors = [`${variables.blue}, ${variables.lightblue}, ${variables.orange}, ${variables.darkpurple}, ${variables.peach}, ${variables.lightergray}`];
 /*
-These colour come from variables stored in the variables.modules.scss and exported through App.module.scss.
-Feel free to change and/or add new colours.
+These colours come from variables stored in the variables.modules.scss and exported through custom.scss.
+Feel free to change and/or add new colours if you want to use the gradient in Hero.js line 23 instead of a random wallpaper generator.
 If you prefere, you can test gradients in a gradient generator like https://gradientgenerator.paytonpierce.dev/ to generate a pair of colors that you like.
 These colors will be used to style your name on the homepage, the background of your picture, and some other accents throughout
 the site.
