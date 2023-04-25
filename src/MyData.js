@@ -172,6 +172,8 @@ const portfolio = {
     gitHubUsername: "LFClaro", //i.e."johnDoe12Gh"
     reposLength: 0, // Keep this at 0 if you want to display specific repos
     specificRepos: [
+        "shelfie-iOS",
+        "Android_Newcomer_Guide",
         "MERN-ecommerce-CLIENT",
         "MERN-ecommerce-SERVER",
         "laravel-food-website-phpparty",
