@@ -126,8 +126,8 @@ const skills = {
             'nodedotjs',
             'express',
             'sass',
+            'dotnet',
             'jekyll',
-            'git',
         ],
         "Mobile Development": [
             'swift',
@@ -139,7 +139,7 @@ const skills = {
         "Software Development": [
             'python',
             'java',
-            'dotnet',
+            'csharp',
         ],
         "Database & API": [
             'mysql',
@@ -171,8 +171,13 @@ const portfolio = {
     show: true,
     heading: "Recent Projects",
     gitHubUsername: "LFClaro", //i.e."johnDoe12Gh"
-    reposLength: 4,
-    specificRepos: [],
+    reposLength: 0, // Keep this at 0 if you want to display specific repos
+    specificRepos: [
+        "MERN-ecommerce-CLIENT",
+        "MERN-ecommerce-SERVER",
+        "laravel-food-website-phpparty",
+        "ASP.NET-Boardgame-Web-App",
+    ],
     content: [
         {
             title: "Project 1",
