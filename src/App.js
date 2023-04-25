@@ -1,13 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 // User data & preferences
-import { navBar } from './MyData.js';
+import { navBar, mainInfo } from './MyData.js';
 // Components
 import Navbar from "./components/NavBar.js";
 import BaseLayout from "./components/BaseLayout.js";
 import Footer from "./components/Footer.js";
 
 function App() {
+  // This will run when the page first loads and change the title to your first and last name
+  const [title] = useState(`${mainInfo.firstName} ${mainInfo.lastName}`);
+  useEffect(() => {
+    document.title = title;
+  }, [title]);
+
   const titleRef = React.useRef();
 
   return (

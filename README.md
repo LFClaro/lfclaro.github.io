@@ -8,7 +8,7 @@
     <br />
     <br />
     Site URL / Demo: 
-    <a href="https://www.luiz-reis.com">luiz-reis.com</a>
+    <a href="https://www.luizclaro.com">luizclaro.com</a>
     <br />
     <br />
   </p>
