@@ -44,7 +44,7 @@ function Hero(props) {
       </motion.div>
       <motion.div className="p-5" initial={{ opacity: window.innerWidth < 996 ? '100%' : '0%' }} animate={{ opacity: '100%' }} transition={{ delay: '2', duration: '2' }}>
         <a
-          className="btn btn-outline-light btn-lg "
+          className="btn btn-light btn-lg"
           href={`mailto:${email}`}
           target="_blank"
           rel="noreferrer noopener"

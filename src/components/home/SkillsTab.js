@@ -20,7 +20,7 @@ function SkillsSection({ skills, isScrolled }) {
               const iconName = simpleIcons[varName].title;
               return (
                 <Col xs={6} md={4} lg={2} className="text-center">
-                  <Card>
+                  <Card key={`skill-card-${index}`}>
                     <Card.Img className="skillIcon mx-auto" src={`https://cdn.simpleicons.org/${skill}`} alt={iconName} />
                     <Card.Text className="badge bg-dark text-light">{iconName}</Card.Text>
                   </Card>
@@ -31,8 +31,8 @@ function SkillsSection({ skills, isScrolled }) {
               const varName = capitalizeFirstLetter(skill);
               return (
                 <Col xs={6} md={4} lg={2} className="text-center">
-                  <Card>
-                    <div className="show-icon">
+                  <Card key={`skill-card-${index}`}>
+                    <div className="fawesome-icon">
                       <i className={`fa-brands fa-${skill} fa-4x text-dark`} style={{ color: '#000000' }}></i>
                       <img className="card-img-top mx-auto" src="..." alt={varName} />
                     </div>

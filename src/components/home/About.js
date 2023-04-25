@@ -1,7 +1,7 @@
 import React from "react";
-
 import axios from "axios";
 import { Jumbotron } from "./migration";
+import { TypeAnimation } from 'react-type-animation';
 
 const pictureLinkRegex = new RegExp(
   /[(http(s)?):(www.)?a-zA-Z0-9@:%._+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_+.~#?&//=]*)/
@@ -13,11 +13,9 @@ const AboutMe = ({ heading, bio, link, imgSize, resume }) => {
   // https://stackoverflow.com/questions/55840294/how-to-fix-missing-dependency-warning-when-using-useeffect-react-hook
   React.useEffect(() => {
     const handleRequest = async () => {
-      const instaLink = "https://www.instagram.com/";
-      const instaQuery = "/?__a=1";
+      const githubLink = "https://avatars.githubusercontent.com/";
       try {
-        const response = await axios.get(instaLink + link + instaQuery);
-        setProfilePicUrl(response.data.graphql.user.profile_pic_url_hd);
+        setProfilePicUrl(githubLink + link);
       } catch (error) {
         setShowPic(false);
         console.error(error.message);
@@ -48,8 +46,8 @@ const AboutMe = ({ heading, bio, link, imgSize, resume }) => {
           )}
         </div>
         <div className={`col-lg-${showPic ? "7" : "12"}`}>
-          <h2 className="display-4 mb-5 text-center text-dark">
-            {heading}
+          <h2 className="display-4 pb-5 text-center text-dark">
+            <TypeAnimation cursor={true} sequence={[heading, 3000, '']} repeat={Infinity} />
           </h2>
           <p className="lead text-center">{bio}</p>
           {resume && (

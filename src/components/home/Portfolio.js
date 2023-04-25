@@ -4,6 +4,7 @@ import { Jumbotron } from "./migration";
 import Row from "react-bootstrap/Row";
 import ProjectCard from "./ProjectCard";
 import axios from "axios";
+import { TypeAnimation } from 'react-type-animation';
 
 const dummyProject = {
     name: null,
@@ -58,7 +59,7 @@ const Project = ({ heading, username, length, specific }) => {
         <Jumbotron fluid id="projects" className="bg-light m-0">
             <Container className="">
                 <h2 className="display-4 pb-5 text-center text-dark">
-                    {heading}
+                    <TypeAnimation cursor={true} sequence={[heading, 3000, '']} repeat={Infinity} />
                 </h2>
                 <Row>
                     {projectsArray.length

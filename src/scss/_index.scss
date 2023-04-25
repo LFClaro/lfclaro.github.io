@@ -19,20 +19,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New";
 }
 
-div i {
-  display: none;
+div.fawesome-icon i {
+  display: inline-block;
   width: auto;
   height: 4rem;
   margin: 0.5rem;
 }
-div img {
-  display: block;
-}
-
-div.show-icon i {
-  display: inline-block;
-}
-div.show-icon img {
+div.fawesome-icon img {
   display: none;
 }
 
@@ -98,6 +91,10 @@ div.show-icon img {
 
 .nav-item {
   transition: color, 0.2s;
+  color: #fff;
+  &:hover{
+    color: #62E884;
+  }
 }
 
 .toggler {
