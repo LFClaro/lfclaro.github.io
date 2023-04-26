@@ -7,6 +7,8 @@ const pictureLinkRegex = new RegExp(
   /[(http(s)?):(www.)?a-zA-Z0-9@:%._+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_+.~#?&//=]*)/
 );
 
+const parseHtml = require('html-react-parser');
+
 const AboutMe = ({ heading, bio, link, imgSize, resume }) => {
   const [profilePicUrl, setProfilePicUrl] = React.useState("");
   const [showPic, setShowPic] = React.useState(Boolean(link));
@@ -49,9 +51,10 @@ const AboutMe = ({ heading, bio, link, imgSize, resume }) => {
           <h2 className="display-4 pb-5 text-center text-dark">
             <TypeAnimation cursor={true} sequence={[heading, 3000, '']} repeat={Infinity} />
           </h2>
-          <p className="lead text-center">{bio}</p>
+          <p className="lead text-center">{parseHtml(bio)}</p>
           {resume && (
             <p className="lead text-center">
+            <br/>
               <a
                 className="btn btn-outline-dark btn-lg"
                 href={resume}

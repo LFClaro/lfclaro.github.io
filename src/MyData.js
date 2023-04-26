@@ -64,9 +64,9 @@ const mainInfo = {
 const about = {
     show: true, // Toggle whether you want to display this section or not
     heading: "About Me",
-    bio: "I'm an app developer with a passion for combining cutting-edge technology with user-friendly design. With a background in audiovisual aesthetics, I bring a unique perspective to my work that allows me to create apps that look and feel great. I'm always thinking critically about how to make my apps more intuitive and engaging, and I'm constantly seeking out new opportunities to improve my skills and stay up-to-date with industry trends. I'm looking for full-time opportunities that allow me to bring my creativity and expertise to a collaborative team environment. Let's connect and create something amazing together!",
+    bio: "I develop user-friendly apps from the ground up.<br /><br />With a background in audiovisual aesthetics, I bring a unique perspective that allows me to think critically about how to make my apps more intuitive and engaging.<br /><br />I'm currently seeking new opportunities to bring creativity and expertise to a collaborative team. Let's connect and create something amazing!",
     resume: "https://drive.google.com/file/d/138XN2O8dLMopmYDY2GY7k2lwGEpbFyHd/view?usp=sharing", // get this link from any provider you host your resume at
-    imageSize: 375,
+    imageSize: 320,
     profilePictureLink: "LFClaro",
     /* If you want the About Section to show a profile picture you can fill the profilePictureLink either with:
 a) Substitute "assets/img/profile.png" for any image you upload to that folder and keep "profile" to import here,

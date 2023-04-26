@@ -30,7 +30,7 @@ function Hero(props) {
           &nbsp;/&#62;
         </motion.span>
       </h2>
-      <motion.p className='lead fw-bold' initial={{ opacity: window.innerWidth < 996 ? '100%' : '0%' }} animate={{ opacity: '100%' }} transition={{ delay: '2', duration: '2' }}>
+      <motion.p className='lead' initial={{ opacity: window.innerWidth < 996 ? '100%' : '0%' }} animate={{ opacity: '100%' }} transition={{ delay: '2', duration: '2' }}>
         {tagline}
       </motion.p>
       <motion.div className="p-5" initial={{ opacity: window.innerWidth < 996 ? '100%' : '0%' }} animate={{ opacity: '100%' }} transition={{ delay: '2', duration: '2' }}>

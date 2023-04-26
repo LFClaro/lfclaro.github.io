@@ -67,42 +67,42 @@ const Navigation = React.forwardRef((props, ref) => {
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" className="toggler" />
       <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="navbar-nav mr-auto">
+        <Nav className="ml-auto justify-content-end">
           {/* {
             <NavLink className="nav-item lead">
               <Link to={process.env.PUBLIC_URL + "/blog"}>Blog</Link>
             </NavLink>
           } */}
           <NavLink
-            className="nav-item lead fw-bold"
+            className="nav-item lead px-2"
             href={about.resume}
             target="_blank"
             rel="noreferrer noopener"
           >
-            Resume
+            RESUME
           </NavLink>
           {about.show && (
             <NavLink
-              className="nav-item lead fw-bold"
+              className="nav-item lead px-2"
               href={process.env.PUBLIC_URL + "/#aboutme"}
             >
-              About
+              ABOUT
             </NavLink>
           )}
           {skills.show && (
             <NavLink
-              className="nav-item lead fw-bold"
+              className="nav-item lead px-2"
               href={process.env.PUBLIC_URL + "/#skills"}
             >
-              Skills
+              SKILLS
             </NavLink>
           )}
           {portfolio.show && (
             <NavLink
-              className="nav-item lead fw-bold"
+              className="nav-item lead px-2"
               href={process.env.PUBLIC_URL + "/#projects"}
             >
-              Projects
+              PROJECTS
             </NavLink>
           )}
         </Nav>
