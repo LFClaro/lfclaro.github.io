@@ -174,6 +174,10 @@ const portfolio = {
     specificRepos: [
         "shelfie-iOS",
         "Android_Newcomer_Guide",
+        "bitcoin-ticker-flutter",
+        "bmi-calculator-flutter",
+        "magic-8-ball-flutter",
+        "dicee-flutter",
         "MERN-ecommerce-CLIENT",
         "MERN-ecommerce-SERVER",
         "laravel-food-website-phpparty",
