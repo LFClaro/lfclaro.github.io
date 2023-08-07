@@ -43,10 +43,10 @@ const mainInfo = {
     baseColor: colors[0],
 
     socials: [
-        {
-            url: "https://www.instagram.com/lfclaro/",
-            name: 'instagram'
-        },
+        // {
+        //     url: "https://www.instagram.com/lfclaro/",
+        //     name: 'instagram'
+        // },
         {
             url: "https://github.com/LFClaro",
             name: 'github'
