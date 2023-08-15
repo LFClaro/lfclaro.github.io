@@ -49,7 +49,7 @@ const Navigation = React.forwardRef((props, ref) => {
       className={`px-3 fixed-top`}
       style={navbarStyle}
       expand="lg"
-      // variant={!isTop ? "light" : "dark"}
+      variant={"dark"}
     >
       <Navbar.Brand className="navbar-brand" href={process.env.PUBLIC_URL + "/#home"}>
         {showPic ? (
