@@ -6,17 +6,17 @@ import {
   Row,
 } from "react-bootstrap";
 
-const Experience = ({ experiences }) => {
+const Experience = ({ heading, content }) => {
   return (
-    <section className="section">
+    <section className="section" id="experience">
       <Container>
         <Jumbotron className="bg-white">
           <h2 className="display-4 mb-5 text-center">
-            {experiences.heading}
+            {heading}
           </h2>
           <Row>
             {
-              experiences.data.map((data, index) => {
+              content.map((data, index) => {
                 return <ExperienceCard key={index} data={data} />
               })
             }

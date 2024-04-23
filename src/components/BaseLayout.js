@@ -14,7 +14,6 @@ import Hobbies from "./home/Hobbies.js";
 import Portfolio from "./home/Portfolio.js";
 import Experience from "./home/Experience.js";
 
-
 const Home = React.forwardRef((props, ref) => {
    return (
       <>
@@ -63,12 +62,14 @@ const Home = React.forwardRef((props, ref) => {
             />
          )}
          </LazyLoad>
+         <LazyLoad width={"100%"} threshold={0.95}>
          {experience.show && (
             <Experience
                heading={experience.heading}
                content={experience.content}
             />
          )}
+         </LazyLoad>
       </>
    );
 });

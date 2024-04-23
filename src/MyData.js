@@ -1,6 +1,7 @@
 import profilePic from "./assets/img/profile.png"
 import logo from "./assets/img/logo.jpg"
-import humber from "./assets/img/companies/humber.png"
+import humber from "./assets/img/companies/humber.jpeg"
+import gcc from "./assets/img/companies/gcc.png"
 import tojobs from "./assets/img/companies/torontojobs.jpeg"
 import mock1 from "./assets/img/mocks/mock1.png"
 import mock2 from "./assets/img/mocks/mock2.png"
@@ -114,7 +115,15 @@ const skills = {
         // To generate the proper names for the icons, search at https://simpleicons.org/
         // If you cant find the skill you're looking for at SimpleIcons, 
         // there's an alternative for brand icons found at https://fontawesome.com/search?o=r&m=free&f=brands
-        "Web Development": [
+        "Mobile Development": [
+            'flutter',
+            'dart',
+            'swift',
+            'android',
+            'java',
+            'kotlin',
+        ],
+         "Web Development": [
             'html5',
             'css3',
             'javascript',
@@ -128,22 +137,15 @@ const skills = {
             'dotnet',
             'jekyll',
         ],
-        "Mobile Development": [
-            'swift',
-            'android',
-            'flutter',
-            'dart',
-            'kotlin',
-        ],
         "Software Development": [
             'python',
             'java',
             'csharp',
         ],
         "Database & API": [
-            'mysql',
-            'mongodb',
             'firebase',
+            'mongodb',
+            'mysql',
             'fastapi',
             'axios',
             'redis',
@@ -158,9 +160,10 @@ const skills = {
         "Other Tools": [
             'git',
             'github',
-            'bitbucket',
-            'docker',
             'jira',
+            'confluence',
+            'docker',
+            'bitbucket',
         ],
     },
 }
@@ -172,16 +175,18 @@ const portfolio = {
     gitHubUsername: "LFClaro", //i.e."johnDoe12Gh"
     reposLength: 0, // Keep this at 0 if you want to display specific repos
     specificRepos: [
-        "luiz_react",
+        "star-realms-score-flutter",
+        "bitcoin-ticker-flutter",
         "shelfie-iOS",
         "Android_Newcomer_Guide",
-        "bitcoin-ticker-flutter",
         "bmi-calculator-flutter",
         "magic-8-ball-flutter",
+        "dicee-flutter",
+        "luiz_react",
         "MERN-ecommerce-CLIENT",
         "MERN-ecommerce-SERVER",
-        "laravel-food-website-phpparty",
-        "ASP.NET-Boardgame-Web-App",
+        // "laravel-food-website-phpparty",
+        // "ASP.NET-Boardgame-Web-App",
     ],
     content: [
         {
@@ -218,22 +223,30 @@ const portfolio = {
 }
 
 const experience = {
-    show: false,
+    show: true,
     heading: "Experience",
     content: [
+        {
+            role: 'Full Stack Flutter Developer',
+            companyName: 'God\'s Cleaning Crew',
+            companyLogo: gcc,
+            date: 'May 2023 – Present',
+            description: '• Single-handedly developing and releasing three Flutter cross-platform MVPs (iOS, Android and web), using  Flutter and the FlutterFlow low-code platform. The apps integrate with Firestore and Google Cloud Functions written in Node.js to handle client relations and job operations, while speeding up quote generation and service payment process.\n\n- The Admin app is a general business logistics manager that allows creation of new jobs, clients and workers in the company\'s database. Other features include Algolia search and quote generation with a fully implemented Stripe payment system for cards and direct bank debit;\n\n- The Clients app takes job requests directly, providing quotes and accepting payments via Stripe API;\n\n- The Workers app is an onboarding and management tool for service providers to receive new jobs and to get paid for their services, all via Stripe Connect API. They\'re also able to communicate via chat / Zego Cloud video call with clients;\n\n• \tMaintaining the company\'s static website (created in Jekyll) via SSH and Git.\n\n• \tWrote a ChatGPT Blog Post automator script in Python which allows the company to create a full Jekyll blog post with text, image and HTML code / YAML front matter in less than 2 minutes, resulting in a 90% reduction in manual workload.',
+        },
         {
             role: 'iOS Developer',
             companyName: 'TorontoJobs.ca',
             companyLogo: tojobs,
             date: 'Jan 2022 – May 2022',
-            description: '',
+            description: '• Conducted the development team on the iOS version of "Guhuza", a service that offers the ability for Employers & Job Seekers to complete the entire seeking / interviewing process on their platform.\n• Created the wireframe for the UI on Adobe XD according to employer specifications and feedback.\n• Implemented Twilio video chat function for the app.\n• Wrote about 50% of the codebase by myself for the app\'s MVP.',
+            
         },
         {
             role: 'Machine Learning Research Assistant',
             companyName: 'Humber College',
             companyLogo: humber,
             date: 'May 2021 – Sep 2022',
-            description: '',
+            description: '• Developed a function to train a Machine Learning model in Python to predict aircraft maintenance codes based on text analysis, which improved prediction accuracy up to 91%. This function also proved to be a time-saver tool, reducing errors and streamlining the model training steps.\n• Led weekly team meetings between the Humber team and the Mitsubishi team, reporting advances and keeping track of information distribution.\n• Trained a new wave of Research Assistants into the project.',
         },
     ]
 }

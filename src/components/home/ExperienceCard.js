@@ -1,21 +1,37 @@
 import React from 'react';
-
+import Skeleton from "react-loading-skeleton";
 import {
+  Card,
   Col,
+  Row,
 } from "react-bootstrap";
 
 const ExperienceCard = ({ data }) => {
   return (
     <Col lg="6">
-      <div className="pb-5 text-center">
-        <img className=" bg-white mb-3" src={data.companylogo} alt="" />
-        <p className="lead">
-          {data.role}
-          <br />
-          {data.date}
-        </p>
-
-      </div>
+      <Card
+        bg="light"
+        text='black'
+        className="p-3 mb-5">
+        <Row className="pb-3">
+          <Col xs lg="2" className="me-3">
+            <img className="bg-white" height="100" src={data.companyLogo} alt="" />
+          </Col>
+          <Col>
+            <Card.Title as="h4">{data.role || <Skeleton />} </Card.Title>
+            <Card.Text>
+              {data.companyName || <Skeleton />}
+              <br />
+              <i>{data.date || <Skeleton />}</i>
+            </Card.Text>
+          </Col>
+        </Row>
+        <Card.Text>
+        <div style={{ whiteSpace: 'pre-line', wordBreak: 'break-word', overflowWrap: 'break-word' }}>
+          {data.description || <Skeleton />}
+          </div>
+        </Card.Text>
+      </Card>
     </Col>
   );
 }
