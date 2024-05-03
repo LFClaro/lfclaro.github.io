@@ -18,6 +18,7 @@ const Home = React.forwardRef((props, ref) => {
    return (
       <>
          <Main
+            wallpapers={mainInfo.wallpapers}
             gradient={mainInfo.gradient}
             fullName={`${mainInfo.firstName} ${mainInfo.middleName} ${mainInfo.lastName}`}
             titles={mainInfo.titles}

@@ -1,4 +1,5 @@
 import profilePic from "./assets/img/profile.png"
+import resume from "./assets/resume.pdf"
 import logo from "./assets/img/logo.jpg"
 import humber from "./assets/img/companies/humber.jpeg"
 import gcc from "./assets/img/companies/gcc.png"
@@ -43,6 +44,17 @@ const mainInfo = {
     gradient: `-webkit-linear-gradient(325deg, ${colors})`, // don't change this either
     baseColor: colors[0],
 
+    wallpapers: "https://source.unsplash.com/1280x720",
+    /*
+    Add any image you want as a wallpaper above.
+    
+    If your prefer a random walpaper generator, the ones below are really good options:
+    wallpapers: "https://source.unsplash.com/1280x720",
+    wallpapers: "https://picsum.photos/1280/720?blur=1",
+    wallpapers: "https://loremflickr.com/1280/720/dark,texture/all",
+    wallpapers: "https://picsum.photos/1280/720/?blur=2&gravity=north",
+    */
+
     socials: [
         // {
         //     url: "https://www.instagram.com/lfclaro/",
@@ -66,19 +78,31 @@ const about = {
     show: true, // Toggle whether you want to display this section or not
     heading: "About Me",
     bio: "I develop user-friendly apps from the ground up.<br /><br />With a background in audiovisual aesthetics, I bring a unique perspective that allows me to think critically about how to make my apps more intuitive and engaging.<br /><br />I'm currently seeking new opportunities to bring creativity and expertise to a collaborative team. Let's connect and create something amazing!",
-    resume: "https://drive.google.com/file/d/138XN2O8dLMopmYDY2GY7k2lwGEpbFyHd/view?usp=sharing", // get this link from any provider you host your resume at
     imageSize: 320,
     profilePictureLink: "LFClaro",
-    /* If you want the About Section to show a profile picture you can fill the profilePictureLink either with:
-a) Substitute "assets/img/profile.png" for any image you upload to that folder and keep "profile" to import here,
-b) Your Github username
-     i.e:profilePictureLink:"johnDoe123",
-c) A link to a hosted image
-     i.e:profilePictureLink:"www.picturesonline.com/johnDoeFancyAvatar.jpg",
-d) If you do not want any picture to be displayed, just leave it empty :)
-     i.e: profilePictureLink: "",
-For Resume either provide link to your resume or import from "assets" directory
-    i.e resume: require("../assets/resume.pdf"), */
+    /* 
+    If you want the About Section to show a profile picture you can fill the profilePictureLink parameter either with:
+    a) Substitute "./assets/img/profile.png" for any image WITH THE SAME NAME and change the parameter:
+    i.e.: profilePictureLink: profilePic,
+    If you want to change the picture name or format, you'll need to change the import on line 1.
+    b) Your Github username to use your Github profile photo.
+    i.e: profilePictureLink:"johnDoe123",
+    c) A link to a hosted image
+    i.e: profilePictureLink:"www.picturesonline.com/johnDoeFancyAvatar.jpg",
+    d) If you do not want any picture to be displayed, just leave it empty :)
+    i.e: profilePictureLink: "",
+    */
+    resume: "https://drive.google.com/file/d/138XN2O8dLMopmYDY2GY7k2lwGEpbFyHd/view?usp=sharing", 
+    /* 
+    To display your resume you can fill the resume parameter either with:
+    a) Substitute "./assets/resume.pdf" for any PDF you upload to that folder and change the paratemer:
+    i.e.: resume: resume,
+    If you want to change the file name or format, you'll need to change the import on line 2.
+    b) A link to a hosted file
+    i.e: resume: "https://drive.google.com/file/d/138XN2O8dLMopmYDY2GY7k2lwGEpbFyHd/view?usp=sharing",
+    d) If you do not want any resume to be displayed, just leave it empty :)
+    i.e: resume: "",
+    */
 }
 
 // HOBBIES SECTION

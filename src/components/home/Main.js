@@ -6,12 +6,10 @@ import { BackgroundImage } from 'react-image-and-background-image-fade';
 import Hero from "./Hero.js";
 
 const Main = React.forwardRef(
-    ({ gradient, fullName, titles, tagline, email, socials }, ref) => {
+    ({ wallpapers, gradient, fullName, titles, tagline, email, socials }, ref) => {
         return (
             <BackgroundImage
-                src='https://source.unsplash.com/collection/37074307/1280x720'
-                // src='https://loremflickr.com/1280/720/dark,texture/all'
-                // src='https://picsum.photos/1280/720/?blur=2&gravity=north'
+                src={wallpapers}
                 isResponsive
                 lazyLoad
                 useChild
