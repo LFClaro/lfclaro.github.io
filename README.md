@@ -4,7 +4,10 @@
   <h1 align="center">👨🏻‍💻 Luiz Reis's Developer Portfolio 👨🏻‍💻</h1>
 
   <p align="center">
-    A personal static website/portfolio template hosted with GitHub Pages, built to showcase my recent projects.
+    A personal static website / portfolio template hosted with GitHub Pages, built to showcase my recent projects.
+    <br />
+    <br />
+    This is also a completely customizable template. All you need to do is change the data in <code>/src/MyData.js</code>.
     <br />
     <br />
     Site URL / Demo: 
