@@ -4,11 +4,11 @@ import logo from "./assets/img/logo.jpg"
 import mhirj from "./assets/img/companies/mhirj.png"
 import gcc from "./assets/img/companies/gcc.png"
 import tojobs from "./assets/img/companies/torontojobs.jpeg"
-// import mock1 from "./assets/img/mocks/mock1.png"
-// import mock2 from "./assets/img/mocks/mock2.png"
-// import mock3 from "./assets/img/mocks/mock3.png"
-// import mock4 from "./assets/img/mocks/mock4.png"
-// import mock5 from "./assets/img/mocks/mock5.png"
+import mock1 from "./assets/img/mocks/mock1.png"
+import mock2 from "./assets/img/mocks/mock2.png"
+import mock3 from "./assets/img/mocks/mock3.png"
+import mock4 from "./assets/img/mocks/mock4.png"
+import mock5 from "./assets/img/mocks/mock5.png"
 
 // Styling
 import variables from './scss/custom.scss';
@@ -217,46 +217,46 @@ const portfolio = {
         "ASP.NET-Boardgame-Web-App",
         "luiz_react",
         "star-realms-score-flutter",
-        "bitcoin-ticker-flutter",
-        "bmi-calculator-flutter",
-        "magic-8-ball-flutter",
-        "dicee-flutter",
+        // "bitcoin-ticker-flutter",
+        // "bmi-calculator-flutter",
+        // "magic-8-ball-flutter",
+        // "dicee-flutter",
         // "shelfie-iOS",
         // "Android_Newcomer_Guide",
     ],
     // TODO: Payton Pierce's Portfolio showcase option
-    // content: [
-    //     {
-    //         title: "Project 1",
-    //         live: "https://paytonpierce.dev", //this should be a link to the live version of your project, think github pages, netlify, heroku, etc. Or your own domain, if you have it.
-    //         source: "https://github.com/paytonjewell", // this should be a link to the **repository** of the project, where the code is hosted.
-    //         image: mock1
-    //     },
-    //     {
-    //         title: "Project 2",
-    //         live: "https://paytonpierce.dev",
-    //         source: "https://github.com/paytonjewell",
-    //         image: mock2
-    //     },
-    //     {
-    //         title: "Project 3",
-    //         live: "https://paytonpierce.dev",
-    //         source: "https://github.com/paytonjewell",
-    //         image: mock3
-    //     },
-    //     {
-    //         title: "Project 4",
-    //         live: "https://paytonpierce.dev",
-    //         source: "https://github.com/paytonjewell",
-    //         image: mock4
-    //     },
-    //     {
-    //         title: "Project 5",
-    //         live: "https://paytonpierce.dev",
-    //         source: "https://github.com/paytonjewell",
-    //         image: mock5
-    //     }
-    // ]
+    content: [
+        {
+            title: "Project 1",
+            live: "https://paytonpierce.dev", //this should be a link to the live version of your project, think github pages, netlify, heroku, etc. Or your own domain, if you have it.
+            source: "https://github.com/paytonjewell", // this should be a link to the **repository** of the project, where the code is hosted.
+            image: mock1
+        },
+        {
+            title: "Project 2",
+            live: "https://paytonpierce.dev",
+            source: "https://github.com/paytonjewell",
+            image: mock2
+        },
+        {
+            title: "Project 3",
+            live: "https://paytonpierce.dev",
+            source: "https://github.com/paytonjewell",
+            image: mock3
+        },
+        {
+            title: "Project 4",
+            live: "https://paytonpierce.dev",
+            source: "https://github.com/paytonjewell",
+            image: mock4
+        },
+        {
+            title: "Project 5",
+            live: "https://paytonpierce.dev",
+            source: "https://github.com/paytonjewell",
+            image: mock5
+        }
+    ]
 }
 
 const experience = {
