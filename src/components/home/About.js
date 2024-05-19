@@ -1,7 +1,11 @@
 import React from "react";
-import axios from "axios";
+import LazyLoad from 'react-lazy-load';
 import { Jumbotron } from "./migration";
 import { TypeAnimation } from 'react-type-animation';
+
+// User data & preferences
+import { hobbies } from '../../MyData.js';
+import Hobbies from "./Hobbies.js";
 
 const pictureLinkRegex = new RegExp(
   /[(http(s)?):(www.)?a-zA-Z0-9@:%._+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_+.~#?&//=]*)/
@@ -51,10 +55,18 @@ const AboutMe = ({ heading, bio, link, imgSize, resume }) => {
           <h2 className="display-4 pb-5 text-center text-dark">
             <TypeAnimation cursor={true} sequence={[heading, 3000, '']} repeat={Infinity} />
           </h2>
-          <p className="lead text-center">{parseHtml(bio)}</p>
+          <p className="lead text-center pb-5">{parseHtml(bio)}</p>
+          {hobbies.show && (
+            <LazyLoad width={"100%"} threshold={0.95}>
+              <Hobbies
+                heading={hobbies.heading}
+                content={hobbies.content}
+              />
+            </LazyLoad>
+          )}
           {resume && (
             <p className="lead text-center">
-            <br/>
+              <br />
               <a
                 className="btn btn-outline-dark btn-lg"
                 href={resume}
@@ -63,7 +75,7 @@ const AboutMe = ({ heading, bio, link, imgSize, resume }) => {
                 role="button"
                 aria-label="Resume/CV"
               >
-                Resume
+                View my Resume
               </a>
             </p>
           )}

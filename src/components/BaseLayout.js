@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
-import { Route, Routes } from "react-router-dom";
 import LazyLoad from 'react-lazy-load';
+import { Route, Routes } from "react-router-dom";
 
 // User data & preferences
 import {
@@ -27,8 +27,8 @@ const Home = React.forwardRef((props, ref) => {
             socials={mainInfo.socials}
             ref={ref}
          />
-         <LazyLoad width={"100%"} threshold={0.95}>
-            {about.show && (
+         {about.show && (
+            <LazyLoad width={"100%"} threshold={0.95}>
                <About
                   heading={about.heading}
                   bio={about.bio}
@@ -36,41 +36,35 @@ const Home = React.forwardRef((props, ref) => {
                   imgSize={about.imageSize}
                   resume={about.resume}
                />
-            )}
-         </LazyLoad>
-         {hobbies.show && (
-            <Hobbies
-               heading={hobbies.heading}
-               content={hobbies.content}
-            />
+            </LazyLoad>
          )}
-         <LazyLoad width={"100%"} threshold={0.95}>
-            {skills.show && (
+         {skills.show && (
+            <LazyLoad width={"100%"} threshold={0.95}>
                <Skills
                   heading={skills.heading}
                   skillList={skills.skillList}
                />
-            )}
-         </LazyLoad>
-         <LazyLoad width={"100%"} threshold={0.95}>
+            </LazyLoad>
+         )}
          {portfolio.show && (
-            <Portfolio
-               heading={portfolio.heading}
-               username={portfolio.gitHubUsername}
-               length={portfolio.reposLength}
-               specific={portfolio.specificRepos}
-               content={portfolio.content}
-            />
+            <LazyLoad width={"100%"} threshold={0.95}>
+               <Portfolio
+                  heading={portfolio.heading}
+                  username={portfolio.gitHubUsername}
+                  length={portfolio.reposLength}
+                  specific={portfolio.specificRepos}
+                  content={portfolio.content}
+               />
+            </LazyLoad>
          )}
-         </LazyLoad>
-         <LazyLoad width={"100%"} threshold={0.95}>
          {experience.show && (
-            <Experience
-               heading={experience.heading}
-               content={experience.content}
-            />
+            <LazyLoad width={"100%"} threshold={0.95}>
+               <Experience
+                  heading={experience.heading}
+                  content={experience.content}
+               />
+            </LazyLoad>
          )}
-         </LazyLoad>
       </>
    );
 });

@@ -1,5 +1,6 @@
 import React from 'react';
 import Skeleton from "react-loading-skeleton";
+import 'react-loading-skeleton/dist/skeleton.css'
 import {
   Card,
   Col,
@@ -14,10 +15,10 @@ const ExperienceCard = ({ data }) => {
         text='black'
         className="p-3 mb-5">
         <Row className="pb-3">
-          <Col xs lg="2" className="me-3">
+          <Col xs="12" md="3" className="me-3">
             <img className="bg-white" height="100" src={data.companyLogo} alt="" />
           </Col>
-          <Col>
+          <Col xs="8">
             <Card.Title as="h4">{data.role || <Skeleton />} </Card.Title>
             <Card.Text>
               {data.companyName || <Skeleton />}

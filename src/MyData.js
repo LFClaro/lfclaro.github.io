@@ -1,14 +1,14 @@
 import profilePic from "./assets/img/profile.png"
 import resume from "./assets/resume.pdf"
 import logo from "./assets/img/logo.jpg"
-import humber from "./assets/img/companies/humber.jpeg"
+import mhirj from "./assets/img/companies/mhirj.png"
 import gcc from "./assets/img/companies/gcc.png"
 import tojobs from "./assets/img/companies/torontojobs.jpeg"
-import mock1 from "./assets/img/mocks/mock1.png"
-import mock2 from "./assets/img/mocks/mock2.png"
-import mock3 from "./assets/img/mocks/mock3.png"
-import mock4 from "./assets/img/mocks/mock4.png"
-import mock5 from "./assets/img/mocks/mock5.png"
+// import mock1 from "./assets/img/mocks/mock1.png"
+// import mock2 from "./assets/img/mocks/mock2.png"
+// import mock3 from "./assets/img/mocks/mock3.png"
+// import mock4 from "./assets/img/mocks/mock4.png"
+// import mock5 from "./assets/img/mocks/mock5.png"
 
 // Styling
 import variables from './scss/custom.scss';
@@ -36,30 +36,31 @@ const mainInfo = {
     logo: logo, // If you prefer to just have your initials instead of a logo image, change this to "".
     initials: "LC", // The example uses first and last, but feel free to use three or more if you like.
     titles: [
-        "a Mobile Developer",
-        "a Frontend Developer",
-        "a Backend Developer",
+        // "a Mobile Developer",
+        // "a Frontend Developer",
+        // "a Backend Developer",
+        "a Full Stack Developer"
     ], // Add as many titles as you want for the animation in the splash page
-    tagline: "Coding apps that will make you wonder why you haven't hired me yet.",
+    tagline: "Coding solutions that will make you wonder why you haven't hired me yet.",
     gradient: `-webkit-linear-gradient(325deg, ${colors})`, // don't change this either
     baseColor: colors[0],
 
-    wallpapers: "https://source.unsplash.com/1280x720",
+    wallpapers: "https://source.unsplash.com/random/1280x720/?pattern,nature,dark",
     /*
     Add any image you want as a wallpaper above.
-    
     If your prefer a random walpaper generator, the ones below are really good options:
-    wallpapers: "https://source.unsplash.com/1280x720",
+    wallpapers: "https://source.unsplash.com/random/1280x720/?INSERT_SEARCH_TERMS",
+    wallpapers: "https://source.unsplash.com/random/1280x720", // Without search terms for faster loading
     wallpapers: "https://picsum.photos/1280/720?blur=1",
     wallpapers: "https://loremflickr.com/1280/720/dark,texture/all",
     wallpapers: "https://picsum.photos/1280/720/?blur=2&gravity=north",
     */
 
     socials: [
-        // {
-        //     url: "https://www.instagram.com/lfclaro/",
-        //     name: 'instagram'
-        // },
+        {
+            url: "https://www.instagram.com/lfclaro/",
+            name: 'instagram'
+        },
         {
             url: "https://github.com/LFClaro",
             name: 'github'
@@ -77,11 +78,12 @@ const mainInfo = {
 const about = {
     show: true, // Toggle whether you want to display this section or not
     heading: "About Me",
-    bio: "I develop user-friendly apps from the ground up.<br /><br />With a background in audiovisual aesthetics, I bring a unique perspective that allows me to think critically about how to make my apps more intuitive and engaging.<br /><br />I'm currently seeking new opportunities to bring creativity and expertise to a collaborative team. Let's connect and create something amazing!",
-    imageSize: 320,
+    bio: "I develop user-friendly software from the ground up.<br /><br />With a background in audiovisual aesthetics, I bring a unique perspective that allows me to think critically about how to make my apps more intuitive and engaging.<br /><br />I'm currently seeking new opportunities to bring creativity and expertise to a collaborative team. Let's connect and create something amazing!",
+    imageSize: 380,
+
     profilePictureLink: "LFClaro",
     /* 
-    If you want the About Section to show a profile picture you can fill the profilePictureLink parameter either with:
+    If you want the "About" section to show a profile picture, fill the profilePictureLink parameter either with:
     a) Substitute "./assets/img/profile.png" for any image WITH THE SAME NAME and change the parameter:
     i.e.: profilePictureLink: profilePic,
     If you want to change the picture name or format, you'll need to change the import on line 1.
@@ -92,9 +94,10 @@ const about = {
     d) If you do not want any picture to be displayed, just leave it empty :)
     i.e: profilePictureLink: "",
     */
-    resume: "https://drive.google.com/file/d/138XN2O8dLMopmYDY2GY7k2lwGEpbFyHd/view?usp=sharing", 
+
+    resume: "",
     /* 
-    To display your resume you can fill the resume parameter either with:
+    To display your resume, fill the "resume" parameter above either with:
     a) Substitute "./assets/resume.pdf" for any PDF you upload to that folder and change the paratemer:
     i.e.: resume: resume,
     If you want to change the file name or format, you'll need to change the import on line 2.
@@ -107,25 +110,33 @@ const about = {
 
 // HOBBIES SECTION
 const hobbies = {
-    show: false,
-    heading: "My Hobbies",
+    show: true,
+    heading: "Stuff I Love:",
     content: [
         {
-            label: 'Reading',
-            emoji: '📖'
+            label: 'Walking my Dogs',
+            emoji: '🐶'
         },
         {
-            label: 'Theater',
-            emoji: '🎭'
+            label: 'Board Games',
+            emoji: '🎲'
         },
         {
             label: 'Movies',
             emoji: '🎥'
         },
         {
+            label: 'Theater',
+            emoji: '🎭'
+        },
+        {
+            label: 'Reading',
+            emoji: '📖'
+        },
+        {
             label: 'Cooking',
             emoji: '👨🏻‍🍳'
-        }
+        },
     ]
 }
 
@@ -139,15 +150,12 @@ const skills = {
         // To generate the proper names for the icons, search at https://simpleicons.org/
         // If you cant find the skill you're looking for at SimpleIcons, 
         // there's an alternative for brand icons found at https://fontawesome.com/search?o=r&m=free&f=brands
-        "Mobile Development": [
-            'flutter',
-            'dart',
-            'swift',
-            'android',
+        "Software Development": [
+            'python',
             'java',
-            'kotlin',
+            'csharp',
         ],
-         "Web Development": [
+        "Web Development": [
             'html5',
             'css3',
             'javascript',
@@ -161,18 +169,22 @@ const skills = {
             'dotnet',
             'jekyll',
         ],
-        "Software Development": [
-            'python',
+        "Mobile Development": [
+            'flutter',
+            'dart',
+            'swift',
+            'android',
             'java',
-            'csharp',
+            'kotlin',
         ],
         "Database & API": [
+            'postgresql',
+            'mysql',
+            'redis',
             'firebase',
             'mongodb',
-            'mysql',
             'fastapi',
             'axios',
-            'redis',
         ],
         "UX / UI": [
             'figma',
@@ -199,51 +211,52 @@ const portfolio = {
     gitHubUsername: "LFClaro", //i.e."johnDoe12Gh"
     reposLength: 0, // Keep this at 0 if you want to display specific repos
     specificRepos: [
+        "MERN-ecommerce-CLIENT",
+        "MERN-ecommerce-SERVER",
+        "laravel-food-website-phpparty",
+        "ASP.NET-Boardgame-Web-App",
+        "luiz_react",
         "star-realms-score-flutter",
         "bitcoin-ticker-flutter",
-        "shelfie-iOS",
-        "Android_Newcomer_Guide",
         "bmi-calculator-flutter",
         "magic-8-ball-flutter",
         "dicee-flutter",
-        "luiz_react",
-        "MERN-ecommerce-CLIENT",
-        "MERN-ecommerce-SERVER",
-        // "laravel-food-website-phpparty",
-        // "ASP.NET-Boardgame-Web-App",
+        // "shelfie-iOS",
+        // "Android_Newcomer_Guide",
     ],
-    content: [
-        {
-            title: "Project 1",
-            live: "https://paytonpierce.dev", //this should be a link to the live version of your project, think github pages, netlify, heroku, etc. Or your own domain, if you have it.
-            source: "https://github.com/paytonjewell", // this should be a link to the **repository** of the project, where the code is hosted.
-            image: mock1
-        },
-        {
-            title: "Project 2",
-            live: "https://paytonpierce.dev",
-            source: "https://github.com/paytonjewell",
-            image: mock2
-        },
-        {
-            title: "Project 3",
-            live: "https://paytonpierce.dev",
-            source: "https://github.com/paytonjewell",
-            image: mock3
-        },
-        {
-            title: "Project 4",
-            live: "https://paytonpierce.dev",
-            source: "https://github.com/paytonjewell",
-            image: mock4
-        },
-        {
-            title: "Project 5",
-            live: "https://paytonpierce.dev",
-            source: "https://github.com/paytonjewell",
-            image: mock5
-        }
-    ]
+    // TODO: Payton Pierce's Portfolio showcase option
+    // content: [
+    //     {
+    //         title: "Project 1",
+    //         live: "https://paytonpierce.dev", //this should be a link to the live version of your project, think github pages, netlify, heroku, etc. Or your own domain, if you have it.
+    //         source: "https://github.com/paytonjewell", // this should be a link to the **repository** of the project, where the code is hosted.
+    //         image: mock1
+    //     },
+    //     {
+    //         title: "Project 2",
+    //         live: "https://paytonpierce.dev",
+    //         source: "https://github.com/paytonjewell",
+    //         image: mock2
+    //     },
+    //     {
+    //         title: "Project 3",
+    //         live: "https://paytonpierce.dev",
+    //         source: "https://github.com/paytonjewell",
+    //         image: mock3
+    //     },
+    //     {
+    //         title: "Project 4",
+    //         live: "https://paytonpierce.dev",
+    //         source: "https://github.com/paytonjewell",
+    //         image: mock4
+    //     },
+    //     {
+    //         title: "Project 5",
+    //         live: "https://paytonpierce.dev",
+    //         source: "https://github.com/paytonjewell",
+    //         image: mock5
+    //     }
+    // ]
 }
 
 const experience = {
@@ -255,22 +268,40 @@ const experience = {
             companyName: 'God\'s Cleaning Crew',
             companyLogo: gcc,
             date: 'May 2023 – Present',
-            description: '• Single-handedly developing and releasing three Flutter cross-platform MVPs (iOS, Android and web), using  Flutter and the FlutterFlow low-code platform. The apps integrate with Firestore and Google Cloud Functions written in Node.js to handle client relations and job operations, while speeding up quote generation and service payment process.\n\n- The Admin app is a general business logistics manager that allows creation of new jobs, clients and workers in the company\'s database. Other features include Algolia search and quote generation with a fully implemented Stripe payment system for cards and direct bank debit;\n\n- The Clients app takes job requests directly, providing quotes and accepting payments via Stripe API;\n\n- The Workers app is an onboarding and management tool for service providers to receive new jobs and to get paid for their services, all via Stripe Connect API. They\'re also able to communicate via chat / Zego Cloud video call with clients;\n\n• \tMaintaining the company\'s static website (created in Jekyll) via SSH and Git.\n\n• \tWrote a ChatGPT Blog Post automator script in Python which allows the company to create a full Jekyll blog post with text, image and HTML code / YAML front matter in less than 2 minutes, resulting in a 90% reduction in manual workload.',
+            description: `• Developing and releasing three Flutter cross-platform apps (iOS, Android and web). The apps integrate with Firebase and Google Cloud Platform (GCP) Node.js Functions in the backend to handle client relations and job operations, while speeding up quote generation and service payment process:
+            
+            - The "Admin" app is a general business logistics manager that allows creation of new jobs, clients and workers in the company's Firestore NoSQL database.  Other features include Algolia search and quote generation with a fully implemented Stripe payment system for cards and direct bank debit;
+            - The "Clients" app takes job requests directly, providing quotes and accepting payments via Stripe API;
+            - The "Workers" app is an onboarding and management tool for service providers, go through background check, receive new job leads and to get paid for their services, all via multiple REST API services. They're also able to communicate via chat / Zego Cloud video call with clients;
+            
+            • Maintaining the company's website (created in Jekyll) via SSH and Git.
+            
+            • Wrote a ChatGPT/Gemini Blog Post automator script in Python which creates a complete AI-generated Jekyll blog post with text, image and HTML code / YAML front matter in less than 2 minutes, resulting in a 90% reduction in manual workload.`,
+        },
+        {
+            role: 'Machine Learning Research Assistant',
+            companyName: 'MHIRJ - a Mitsubishi Heavy Industries company',
+            companyLogo: mhirj,
+            date: 'May 2021 – Sep 2022',
+            description: `• Developed a function to train a Machine Learning model in Python to predict aircraft maintenance codes based on text analysis, which improved prediction accuracy up to 91%. This function also proved to be a time-saver tool, reducing errors and streamlining the model training steps.
+            
+            • Led weekly team meetings between the Humber College team and the Mitsubishi team, reporting advances and keeping track of information distribution.
+            
+            • Trained a new wave of assistants into the project as part of the Research Assistant program in Humber College.`,
         },
         {
             role: 'iOS Developer',
             companyName: 'TorontoJobs.ca',
             companyLogo: tojobs,
             date: 'Jan 2022 – May 2022',
-            description: '• Conducted the development team on the iOS version of "Guhuza", a service that offers the ability for Employers & Job Seekers to complete the entire seeking / interviewing process on their platform.\n• Created the wireframe for the UI on Adobe XD according to employer specifications and feedback.\n• Implemented Twilio video chat function for the app.\n• Wrote about 50% of the codebase by myself for the app\'s MVP.',
+            description: `• Conducted the development team on the iOS version of "Guhuza", a service that offers the ability for Employers & Job Seekers to complete the entire seeking / interviewing process on their platform.
             
-        },
-        {
-            role: 'Machine Learning Research Assistant',
-            companyName: 'Humber College',
-            companyLogo: humber,
-            date: 'May 2021 – Sep 2022',
-            description: '• Developed a function to train a Machine Learning model in Python to predict aircraft maintenance codes based on text analysis, which improved prediction accuracy up to 91%. This function also proved to be a time-saver tool, reducing errors and streamlining the model training steps.\n• Led weekly team meetings between the Humber team and the Mitsubishi team, reporting advances and keeping track of information distribution.\n• Trained a new wave of Research Assistants into the project.',
+            • Created the wireframe for the UI on Adobe XD according to employer specifications and feedback.
+            
+            • Implemented Twilio video chat function for the app.
+            
+            • Wrote about 50% of the codebase by myself for the app's MVP.`,
+
         },
     ]
 }

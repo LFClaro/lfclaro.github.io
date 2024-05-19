@@ -1,6 +1,7 @@
 import React from 'react';
 import ExperienceCard from "./ExperienceCard";
 import { Jumbotron } from './migration';
+import { TypeAnimation } from 'react-type-animation';
 import {
   Container,
   Row,
@@ -9,10 +10,10 @@ import {
 const Experience = ({ heading, content }) => {
   return (
     <section className="section" id="experience">
-      <Container>
-        <Jumbotron className="bg-white">
-          <h2 className="display-4 mb-5 text-center">
-            {heading}
+      <Jumbotron fluid className="m-0 bg-dark bg-gradient">
+        <Container className="p-5 text-light">
+          <h2 className="display-4 mb-5 text-center" style={{ color: '#62E884' }}>
+            <TypeAnimation cursor={true} sequence={[heading, 3000, '']} repeat={Infinity} />
           </h2>
           <Row>
             {
@@ -21,8 +22,8 @@ const Experience = ({ heading, content }) => {
               })
             }
           </Row>
-        </Jumbotron>
-      </Container>
+        </Container>
+      </Jumbotron>
     </section>
   );
 }
