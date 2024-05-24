@@ -213,7 +213,7 @@ const portfolio = {
     specificRepos: [
         "MERN-ecommerce-CLIENT",
         "MERN-ecommerce-SERVER",
-        "luiz_react",
+        "lfclaro.github.io",
         "star-realms-score-flutter",
         "laravel-food-website-phpparty",
         "ASP.NET-Boardgame-Web-App",
