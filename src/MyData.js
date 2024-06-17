@@ -45,7 +45,8 @@ const mainInfo = {
     gradient: `-webkit-linear-gradient(325deg, ${colors})`, // don't change this either
     baseColor: colors[0],
 
-    wallpapers: "https://source.unsplash.com/random/1280x720/?pattern,nature,dark",
+    wallpapers: "https://picsum.photos/1280/720/?blur=2&gravity=north",
+
     /*
     Add any image you want as a wallpaper above.
     If your prefer a random walpaper generator, the ones below are really good options:
@@ -150,10 +151,13 @@ const skills = {
         // To generate the proper names for the icons, search at https://simpleicons.org/
         // If you cant find the skill you're looking for at SimpleIcons, 
         // there's an alternative for brand icons found at https://fontawesome.com/search?o=r&m=free&f=brands
-        "Software Development": [
-            'python',
+        "Mobile Development": [
+            'flutter',
+            'dart',
+            'swift',
+            'android',
             'java',
-            'csharp',
+            'kotlin',
         ],
         "Web Development": [
             'html5',
@@ -169,20 +173,17 @@ const skills = {
             'dotnet',
             'jekyll',
         ],
-        "Mobile Development": [
-            'flutter',
-            'dart',
-            'swift',
-            'android',
+        "Software Development": [
+            'python',
             'java',
-            'kotlin',
+            'csharp',
         ],
         "Database & API": [
-            'postgresql',
-            'mysql',
-            'redis',
             'firebase',
             'mongodb',
+            'mysql',
+            'postgresql',
+            'redis',
             'fastapi',
             'axios',
         ],
@@ -211,17 +212,18 @@ const portfolio = {
     gitHubUsername: "LFClaro", //i.e."johnDoe12Gh"
     reposLength: 0, // Keep this at 0 if you want to display specific repos
     specificRepos: [
+        "star-realms-score-flutter",
+        "flutter_firebase_crud",
+        "lfclaro.github.io",
+        "shelfie-iOS",
         "MERN-ecommerce-CLIENT",
         "MERN-ecommerce-SERVER",
-        "lfclaro.github.io",
-        "star-realms-score-flutter",
-        "laravel-food-website-phpparty",
-        "ASP.NET-Boardgame-Web-App",
+        // "laravel-food-website-phpparty",
+        // "ASP.NET-Boardgame-Web-App",
         // "bitcoin-ticker-flutter",
         // "bmi-calculator-flutter",
         // "magic-8-ball-flutter",
         // "dicee-flutter",
-        // "shelfie-iOS",
         // "Android_Newcomer_Guide",
     ],
     // TODO: Payton Pierce's Portfolio showcase option
