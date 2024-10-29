@@ -57,12 +57,10 @@ const AboutMe = ({ heading, bio, link, imgSize, resume }) => {
           </h2>
           <p className="lead text-center pb-5">{parseHtml(bio)}</p>
           {hobbies.show && (
-            <LazyLoad width={"100%"} threshold={0.95}>
-              <Hobbies
-                heading={hobbies.heading}
-                content={hobbies.content}
-              />
-            </LazyLoad>
+            <Hobbies
+              heading={hobbies.heading}
+              content={hobbies.content}
+            />
           )}
           {resume && (
             <p className="lead text-center">
